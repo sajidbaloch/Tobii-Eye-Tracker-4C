@@ -1,9 +1,14 @@
+#Header files to include the packages
 import tobii_research as tr
 import time
 
+#Find the connected eye trackers
 found_eyetrackers = tr.find_all_eyetrackers()
 
+#Select the first eye tracker connected
 my_eyetracker = found_eyetrackers[0]
+
+#print the details of the selected eye tracker
 print("Address: " + my_eyetracker.address)
 print("Model: " + my_eyetracker.model)
 print("Name (It's OK if this is empty): " + my_eyetracker.device_name)
